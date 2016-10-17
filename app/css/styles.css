@@ -51,12 +51,6 @@ ul, li, h1, a {
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-.align-right {
-	text-align:right;
-}
-.align-left {
-	text-align:left;
-}
 #contentWrapper {
 	max-width: 1100px;
 	margin: 0 auto;
@@ -70,11 +64,13 @@ ul, li, h1, a {
 #contentWrapper #header .head-col {
 	vertical-align:bottom;
 	font-size:21px;
-	text-align:left;
+	text-align:right;
 	width:545px;
 	display: inline-block;
 }
-
+#contentWrapper #header .head-col:first-child {
+	text-align:left;
+}
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../fonts/glyphicons-halflings-regular.eot');
@@ -181,7 +177,7 @@ ul, li, h1, a {
 	vertical-align: top;
 	font: normal 14px/21px 'KelsonSansRegular', sans-serif;	
 	color:#474f50;
-	text-align:left;
+	text-align:left;	
 }
 #contentWrapper .main-content .table-wrap .invoice-table tr.dark-background {
 	background-color:#c9d3db;
@@ -215,6 +211,7 @@ ul, li, h1, a {
 }
 #contentWrapper .main-content .table-wrap  .invoice-table .table-border {
 	border-bottom:solid 1px #c9d3db;
+	vertical-align: top;	
 }
 #contentWrapper .main-content .table-wrap table tr {
 	background-color:#eaeef5;
@@ -264,6 +261,10 @@ ul, li, h1, a {
 }
 #contentWrapper .main-content .table-wrap .invoice-table .total td {
 	padding:10px;
+}
+#contentWrapper .main-content .table-wrap .invoice-table .total td:first-child, #contentWrapper .main-content .table-wrap .invoice-table .total td:last-child {
+	font:bold 16px/21px 'KelsonSansBold', sans-serif;
+
 }
 #contentWrapper .main-content .width25 {
   width: 25%;
